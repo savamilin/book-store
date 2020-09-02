@@ -1,0 +1,127 @@
+body {
+    margin: 0px;
+    background-color: lightblue;
+}
+
+header {
+    background-color: black;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 64px;
+    animation-name: myBooksHeader;
+    animation-duration: 2s;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 1400px;
+    justify-content: space-around;
+}
+
+
+/* search */
+
+#search input {
+    padding: 10px;
+}
+
+#search input:focus {
+    outline: none;
+    background-color: white;
+}
+
+#search label {
+    cursor: pointer;
+}
+
+span i {
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+}
+
+span i:hover {
+    transform: scale(1.2);
+}
+
+
+/*  */
+
+.cover {
+    width: 300px;
+    height: 400px;
+}
+
+p {
+    font-family: 'Lobster', cursive;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0 50px 0;
+}
+
+button {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0px;
+}
+
+.div-book {
+    animation-name: myBooksMove;
+    animation-duration: 2s;
+    margin: 0 20px 100px 0;
+    box-shadow: 3px 6px 3px black;
+    text-align: center;
+}
+
+.div-book:hover {
+    transform: scale(1.2)
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+@keyframes myBooksMove {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    70% {
+        transform: translateX(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes myBooksHeader {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    70% {
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
